@@ -9,7 +9,7 @@ $api_id = '4d192b3d288c9fe66792b4a1140e6a3d';
 $units_format = 'metric'; //metric(celcius, meter/sec), imperial(farenheit, miles/hour), default(Kelvin, meter/sec)
 $lang = 'ru';
 $api = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=' . $city_id . '&units=' . $units_format . '&lang=' . $lang . '&APPID=' . $api_id);
-$filename = 'weather.json';
+$filename = 'city.list.json';
 file_put_contents($filename, $api);
 $decode_api = json_decode($api, true);
 $icon = $decode_api['weather'][0]['icon'];
@@ -29,7 +29,7 @@ $weather_descr = mb_ucfirst($weather_descr);
 <head>
     <title>1-4</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
