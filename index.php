@@ -1,12 +1,7 @@
 <?php
 $appid = '8a43ceeacde9e3ff1f67525b1d2de840';
 $id_default = '524894';
-if (isset($_REQUEST['city'])) {
-    $city_id = $_REQUEST['city'];
-};
-if (empty($city_id)) {
-    $city_id = $id_default;
-};
+$city_id = isset($_REQUEST[‘city’]) ? $_REQUEST[‘city’] : $id_default;
 $api = file_get_contents("http://api.openweathermap.org/data/2.5/weather?id=" . $city_id . "&appid=" . $appid);
 $city_list_file = file_get_contents("city.list.json");
 $decode_api = json_decode($api, true);
