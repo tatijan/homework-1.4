@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 30vw;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+header {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.city {
+    display: inline-block;
+    width: 65%;
+}
+
+.wrap-temp {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1em;
+    margin: 10px;
+    padding-bottom: 10px;
+
+}
+.weather {
+    width: 100%;
+    text-align: center;
+    /*line-height: 50px;*/
+}
+
+.icon, .descr {
+    /*border: 1px solid black;*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon img {
+    margin-bottom: -10px;
+}
+
+.descr {
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    width: 50%;
+    text-align: right;
+    padding: 5%;
+}
+
+td {
+    width: 50%;
+    text-align: left;
+}
